@@ -1,0 +1,10 @@
+class Prototype < ApplicationRecord
+  has_many :comments
+  belongs_to :users
+  has_one_attached :image
+
+  validates :title,       presence: true
+  validates :,    presence: true
+  validates :, presence: true
+  validates :,   presence: true
+end
