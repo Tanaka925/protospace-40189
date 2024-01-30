@@ -6,8 +6,8 @@
         <%= link_to "#{current_user.name}さん", root_path, class: :greeting__link%>
       </div>
     <% end %>
-    <div class="card__wrapper">
-      <%= render partial: 'prototype', collection: @prototype %> 
+    <div class="card__wrapper">a
+      <%= render partial: "prototype", collection: @prototypes %>
     </div>
   </div>
 </main>

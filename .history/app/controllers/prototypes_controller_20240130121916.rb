@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
   
   def index
-    @prototype = Prototype.all
+    @prototype = Prototype.あっl
   end
 
   def new
