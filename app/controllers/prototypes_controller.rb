@@ -10,13 +10,16 @@ class PrototypesController < ApplicationController
 
   def create
     @prototype = Prototype.new(prototype_params) # 新しいプロトタイプを作成
-
-  if @prototype.save # データの保存が成功した場合
-      redirect_to root_path
-    else
-      render :new, status: :unprocessable_entity
+    if @prototype.save # データの保存が成功した場合
+        redirect_to root_path
+      else
+        render :new, status: :unprocessable_entity
+      end
     end
-  end
+
+    def show
+      @prototype = Prototype.find(params[:id])
+    end
 
   private
   def prototype_params
